@@ -326,6 +326,26 @@ def maopao_sort(list_data):
     print list_data
 
 
+def fib(n):
+    """
+    :param n:
+    :return:
+    """
+    t = 0
+
+
+
+def use_yield():
+    """
+    yield的基本用法
+    :return:
+    """
+
+    print "Hi, i'm before yield!"
+    yield 5
+    print "Hi, i'm after yield!"
+
+
 if __name__ == "__main__":
     # demo()
     # use_zfill()
@@ -357,4 +377,9 @@ if __name__ == "__main__":
     # fun_test(10, "frank", "xiong", mobile="18628286213", sex="male")
     # use_sort()
     # maopao_sort([2, 5, 4, 8, 11, 3, 6])
+
+    # 运行use_yield函数不会打印
+    use_yield().next()
+    use_yield()
+    use_yield().next()
 
