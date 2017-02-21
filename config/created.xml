@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<info dicrip="测试Text">
+	<book is_borrow="False">
+		<name>人性的弱点</name>
+		<price>60</price>
+	</book>
+</info>

@@ -1,0 +1,29 @@
+<?xml version='1.0' encoding='utf-8'?>
+<info>
+    <datetime>2016-09-20</datetime>
+    <name attr="frank_xiong" id="119" is_fishing="true">
+        <sex>男</sex>
+        <age>18</age>
+        <courses>
+            <math>90</math>
+            <en>99</en>
+        </courses>
+        <car>标致308</car>
+    </name>
+    <name attr="冯力川" id="200">
+        <sex>男</sex>
+        <age>28</age>
+        <courses>
+            <math>91</math>
+            <en>99</en>
+        </courses>
+    </name>
+    <name attr="婆娘" id="201">
+        <sex>男</sex>
+        <age>28</age>
+        <courses>
+            <math>92</math>
+            <en>99</en>
+        </courses>
+    </name>
+</info>
