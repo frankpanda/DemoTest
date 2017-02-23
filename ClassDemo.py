@@ -139,90 +139,94 @@ def fibs(num):
         a, b = b, a + b
         n += 1
 
+if __name__ == "__main__":
+    """
+    panda = Person("panda",29)
+    panda.say_hi()
 
-"""
-panda = Person("panda",29)
-panda.say_hi()
+    han = Person("han", 28)
+    han.say_hi()
 
-han = Person("han", 28)
-han.say_hi()
+    han.get_acount()
 
-han.get_acount()
+    """
 
-"""
+    math_teacher = Teacher("frank_xiong", 29, "male")
+    math_teacher.say_hi()
+    math_teacher.get_count()
+    math_teacher.get_sex()
 
-math_teacher = Teacher("frank_xiong", 29, "male")
-math_teacher.say_hi()
-math_teacher.get_count()
-math_teacher.get_sex()
+    print "下面是通过super方法调用父类方法："
+    math_teacher.get_teacher_info()
 
-print "下面是通过super方法调用父类方法："
-math_teacher.get_teacher_info()
+    print "####################class rectangle##################"
 
-print "####################class rectangle##################"
+    rectangle = Rectangle()
+    rectangle.size = (110, 150)
+    print "width and height is:", rectangle.size
+    print "width is:", rectangle.width
 
-rectangle = Rectangle()
-rectangle.size = (110, 150)
-print "width and height is:", rectangle.size
-print "width is:", rectangle.width
+    print "###################class TestProperty################"
+    test = TestProperty()
+    test.val = 255
+    print test.val
 
-print "###################class TestProperty################"
-test = TestProperty()
-test.val = 255
-print test.val
+    print "###################class StaticAndCLS################"
+    sc = StaticAndCLS(2, 3)
+    sc.static_md()
+    sc.class_md()
+    sc.general_md()
+    sc.count = 11
+    sc.static_md()
+    sc.class_md()
+    print sc.count
 
-print "###################class StaticAndCLS################"
-sc = StaticAndCLS(2, 3)
-sc.static_md()
-sc.class_md()
-sc.general_md()
-sc.count = 11
-sc.static_md()
-sc.class_md()
-print sc.count
+    print "###################class Fib 迭代器###################"
+    fib = Fib()
+    for f in fib:
+        if f < 10:
+            print f
+        else:
+            break
+    s = "abc"
+    it = iter(s)
 
-print "###################class Fib 迭代器###################"
-fib = Fib()
-for f in fib:
-    if f < 10:
-        print f
-    else:
-        break
-s = "abc"
-it = iter(s)
-
-print "###################use yield in fibs method###################"
-fib_yield = fibs(5)
-print fib_yield.next()
-
-
-def flatten(nested):
-    try:
-        for subs in nested:
-            for element in flatten(subs):
-                yield element
-    except TypeError:
-        yield nested
+    print "###################use yield in fibs method###################"
+    fib_yield = fibs(5)
+    print fib_yield.next()
 
 
-print list(flatten([[1, 2], [3, 4, [5, 6, 7]], 9]))
+    def flatten(nested):
+        try:
+            for subs in nested:
+                for element in flatten(subs):
+                    yield element
+        except TypeError:
+            yield nested
 
 
-def use_yield(n):
-    print "begin test..."
-    i = 0
-    num = 1
-
-    while i < n:
-        print "第%s次调用yield之前i=%s" % (num, i)
-        yield i
-        i += 1
-        print "第%s次调用yield之后i=%s" % (num, i)
-        num += 1
-
-    print "end"
+    print list(flatten([[1, 2], [3, 4, [5, 6, 7]], 9]))
 
 
-uy = use_yield(3)
-print [x for x in uy]
+    def use_yield(n):
+        print "begin test..."
+        i = 0
+        num = 1
 
+        while i < n:
+            print "第%s次调用yield之前i=%s" % (num, i)
+            yield i
+            i += 1
+            print "第%s次调用yield之后i=%s" % (num, i)
+            num += 1
+
+        print "end"
+
+
+    uy = use_yield(3)
+    print [x for x in uy]
+
+    print "#############fib############"
+    fib = fibs(5)
+    for i in range(5):
+        print fib.next()

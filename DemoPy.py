@@ -326,13 +326,14 @@ def maopao_sort(list_data):
     print list_data
 
 
-def fib(n):
-    """
-    :param n:
-    :return:
-    """
-    t = 0
+def fibs(num):
+    """ use yield keyword """
 
+    n, a, b = 0, 0, 1
+    while n < num:
+        yield b
+        a, b = b, a + b
+        n += 1
 
 
 def use_yield():
@@ -340,10 +341,10 @@ def use_yield():
     yield的基本用法
     :return:
     """
-
     print "Hi, i'm before yield!"
     yield 5
-    print "Hi, i'm after yield!"
+    print "hi, i'm after first yield!"
+    yield 10
 
 
 if __name__ == "__main__":
@@ -378,8 +379,6 @@ if __name__ == "__main__":
     # use_sort()
     # maopao_sort([2, 5, 4, 8, 11, 3, 6])
 
-    # 运行use_yield函数不会打印
-    use_yield().next()
-    use_yield()
-    use_yield().next()
-
+    y = use_yield()
+    print y.next()
+    print y.next()
