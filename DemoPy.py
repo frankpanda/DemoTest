@@ -8,6 +8,7 @@ import xlrd
 import time
 import datetime
 import json
+from lxml import etree
 
 __author__ = 'Panda'
 
@@ -345,6 +346,15 @@ def use_yield():
     yield 5
     print "hi, i'm after first yield!"
     yield 10
+
+
+def use_lxml():
+    """
+    lxml库的基本操作
+    :return:
+    """
+    html = etree.parse(u"demo.xml".decode("utf-8"))
+    pass
 
 
 if __name__ == "__main__":
