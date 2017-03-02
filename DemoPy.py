@@ -373,6 +373,13 @@ def get_max_char(string):
     print temp_list
     print u"出现次数最多的字符是：" + max(data_dict, key=data_dict.get)
 
+    max_char = temp_list[0]
+    for j in range(len(temp_list)-1):
+        if temp_list[j] < temp_list[j + 1]:
+            max_char = temp_list[j + 1]
+    print max_char
+
+
 if __name__ == "__main__":
     # demo()
     # use_zfill()
