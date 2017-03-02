@@ -357,6 +357,22 @@ def use_lxml():
     pass
 
 
+def get_max_char(string):
+    """
+    找出给定字符串中出现次数最多的字符
+    :param string:
+    :return:
+    """
+    data_dict = {}
+    temp_list = []
+    str_list = list(string)
+    for i in range(len(str_list)):
+        if not str_list[i] in temp_list:
+            temp_list.append(str_list[i])
+            data_dict[str_list[i]] = str_list.count(str_list[i])
+    print temp_list
+    print u"出现次数最多的字符是：" + max(data_dict, key=data_dict.get)
+
 if __name__ == "__main__":
     # demo()
     # use_zfill()
@@ -388,7 +404,9 @@ if __name__ == "__main__":
     # fun_test(10, "frank", "xiong", mobile="18628286213", sex="male")
     # use_sort()
     # maopao_sort([2, 5, 4, 8, 11, 3, 6])
-
+    """
     y = use_yield()
     print y.next()
     print y.next()
+    """
+    get_max_char("abbcccdddd")
