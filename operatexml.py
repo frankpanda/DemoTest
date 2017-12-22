@@ -118,6 +118,7 @@ def read_xml_by_et():
         # tree = ET.fromstring(xml_string)
         # 获取root节点
         root = tree.getroot()
+        print root
     except Exception, e:
         print u"读取xml文件异常..."
         print e
@@ -132,7 +133,7 @@ def read_xml_by_et():
     file_write.close()
 
     # 访问child by索引
-    print root[1][1].text
+    print "time -->", root[1][1].text
 
     # 通过迭代来访问特定的元素
     for temp in root.iter("name"):
@@ -148,6 +149,6 @@ def read_xml_by_et():
 
 if __name__ == '__main__':
     # read_xml_by_dom(file_path)
-    # read_xml_by_et(file_path)
+    read_xml_by_et()
     # write_xml_by_et()
-    write_xml_by_dom()
+    # write_xml_by_dom()

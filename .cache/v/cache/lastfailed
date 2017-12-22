@@ -1,0 +1,4 @@
+{
+  "pytestdemo.py::test_faild_1": true, 
+  "pytestdemo.py::test_faild_2": true
+}

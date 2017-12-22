@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testResults version="1.2">
+<httpSample t="71" it="0" lt="71" ts="1511428858506" s="false" lb="获得当前学段所有的年级列表" rc="200" rm="OK" tn="线程组 1-1" dt="text" by="994" ng="1" na="1">
+  <assertionResult>
+    <name>响应断言</name>
+    <failure>true</failure>
+    <error>false</error>
+    <failureMessage>Test failed: text expected to contain /&quot;phase&quot;:4,&quot;gradeName&quot;:&quot;高一&quot;,&quot;gradeId&quot;:10,&quot;groupId&quot;:401,&quot;phaseName&quot;:&quot;高中&quot;111/</failureMessage>
+  </assertionResult>
+  <responseData class="java.lang.String">{&quot;code&quot;:0,&quot;message&quot;:null,&quot;errorMessage&quot;:null,&quot;data&quot;:[{&quot;phase&quot;:4,&quot;gradeName&quot;:&quot;高一&quot;,&quot;gradeId&quot;:10,&quot;groupId&quot;:401,&quot;phaseName&quot;:&quot;高中&quot;},{&quot;phase&quot;:4,&quot;gradeName&quot;:&quot;高二&quot;,&quot;gradeId&quot;:11,&quot;groupId&quot;:402,&quot;phaseName&quot;:&quot;高中&quot;},{&quot;phase&quot;:4,&quot;gradeName&quot;:&quot;高二(文)&quot;,&quot;gradeId&quot;:12,&quot;groupId&quot;:402,&quot;phaseName&quot;:&quot;高中&quot;},{&quot;phase&quot;:4,&quot;gradeName&quot;:&quot;高二(理)&quot;,&quot;gradeId&quot;:13,&quot;groupId&quot;:402,&quot;phaseName&quot;:&quot;高中&quot;},{&quot;phase&quot;:4,&quot;gradeName&quot;:&quot;高三&quot;,&quot;gradeId&quot;:14,&quot;groupId&quot;:403,&quot;phaseName&quot;:&quot;高中&quot;},{&quot;phase&quot;:4,&quot;gradeName&quot;:&quot;高三(文)&quot;,&quot;gradeId&quot;:15,&quot;groupId&quot;:403,&quot;phaseName&quot;:&quot;高中&quot;},{&quot;phase&quot;:4,&quot;gradeName&quot;:&quot;高三(理)&quot;,&quot;gradeId&quot;:16,&quot;groupId&quot;:403,&quot;phaseName&quot;:&quot;高中&quot;}],&quot;stackTrace&quot;:null}</responseData>
+  <cookies class="java.lang.String"></cookies>
+  <method class="java.lang.String">POST</method>
+  <queryString class="java.lang.String">phase=4</queryString>
+  <java.net.URL>http://192.168.2.48:8004/ebag-kewai-xwhdapi/tyxwhdTeacher/searchSectionGrades%20</java.net.URL>
+</httpSample>
+<httpSample t="12" it="0" lt="12" ts="1511428858590" s="true" lb="资源类型" rc="200" rm="OK" tn="线程组 1-1" dt="text" by="566" ng="1" na="1">
+  <assertionResult>
+    <name>响应断言</name>
+    <failure>false</failure>
+    <error>false</error>
+  </assertionResult>
+  <responseData class="java.lang.String">{&quot;code&quot;:0,&quot;message&quot;:null,&quot;errorMessage&quot;:null,&quot;data&quot;:[{&quot;id&quot;:1,&quot;name&quot;:&quot;课前导学&quot;,&quot;inDate&quot;:1471773195000},{&quot;id&quot;:5,&quot;name&quot;:&quot;课中1234&quot;,&quot;inDate&quot;:1471845702000},{&quot;id&quot;:6,&quot;name&quot;:&quot;课后拓展&quot;,&quot;inDate&quot;:1481275888000}],&quot;stackTrace&quot;:null}</responseData>
+  <cookies class="java.lang.String"></cookies>
+  <method class="java.lang.String">POST</method>
+  <queryString class="java.lang.String">tenantId=2</queryString>
+  <java.net.URL>http://192.168.2.48:8004/ebag-kewai-xwhdapi/tyxwhdTeacher/getResourceTypes</java.net.URL>
+</httpSample>
+<httpSample t="48" it="0" lt="48" ts="1511428858681" s="true" lb="章节列表" rc="200" rm="OK" tn="线程组 1-1" dt="text" by="4332" ng="1" na="1">
+  <assertionResult>
+    <name>响应断言</name>
+    <failure>false</failure>
+    <error>false</error>
+  </assertionResult>
+  <responseData class="java.lang.String">{&quot;code&quot;:0,&quot;message&quot;:null,&quot;errorMessage&quot;:null,&quot;data&quot;:[{&quot;children&quot;:[{&quot;children&quot;:[{&quot;children&quot;:[],&quot;level&quot;:2,&quot;chaptername&quot;:&quot;第1课　夏、商、西周的政治制度&quot;,&quot;id&quot;:123,&quot;sort&quot;:1},{&quot;children&quot;:[],&quot;level&quot;:2,&quot;chaptername&quot;:&quot;第2课　秦朝中央集权制度的形成&quot;,&quot;id&quot;:138,&quot;sort&quot;:2},{&quot;children&quot;:[],&quot;level&quot;:2,&quot;chaptername&quot;:&quot;第3课　从汉至元政治制度的演变&quot;,&quot;id&quot;:139,&quot;sort&quot;:3},{&quot;children&quot;:[],&quot;level&quot;:2,&quot;chaptername&quot;:&quot;第4课　明清君主专制的加强&quot;,&quot;id&quot;:140,&quot;sort&quot;:4}],&quot;level&quot;:1,&quot;chaptername&quot;:&quot;第一单元　古代中国的政治制度&quot;,&quot;id&quot;:122,&quot;sort&quot;:1},{&quot;children&quot;:[{&quot;children&quot;:[],&quot;level&quot;:2,&quot;chaptername&quot;:&quot;第5课　古代希腊民主政治&quot;,&quot;id&quot;:125,&quot;sort&quot;:1},{&quot;children&quot;:[],&quot;level&quot;:2,&quot;chaptername&quot;:&quot;第6课　罗马法的起源与发展&quot;,&quot;id&quot;:141,&quot;sort&quot;:2},{&quot;children&quot;:[],&quot;level&quot;:2,&quot;chaptername&quot;:&quot;探究活动课　“黑暗”的西欧中世纪——历史素材阅读与研讨&quot;,&quot;id&quot;:142,&quot;sort&quot;:3}],&quot;level&quot;:1,&quot;chaptername&quot;:&quot;第二单元　古代希腊罗马的政治制度&quot;,&quot;id&quot;:124,&quot;sort&quot;:2},{&quot;children&quot;:[{&quot;children&quot;:[],&quot;level&quot;:2,&quot;chaptername&quot;:&quot;第7课　英国君主立宪制的建立&quot;,&quot;id&quot;:144,&quot;sort&quot;:1}],&quot;level&quot;:1,&quot;chaptername&quot;:&quot;第三单元　近代西方资本主义政治制度的确立与发展&quot;,&quot;id&quot;:143,&quot;sort&quot;:3},{&quot;children&quot;:[{&quot;children&quot;:[],&quot;level&quot;:2,&quot;chaptername&quot;:&quot;第10课　鸦片战争&quot;,&quot;id&quot;:148,&quot;sort&quot;:1},{&quot;children&quot;:[],&quot;level&quot;:2,&quot;chaptername&quot;:&quot;第11课　太平天国运动&quot;,&quot;id&quot;:149,&quot;sort&quot;:2},{&quot;children&quot;:[],&quot;level&quot;:2,&quot;chaptername&quot;:&quot;第12课　甲午中日战争和八国联军侵华&quot;,&quot;id&quot;:150,&quot;sort&quot;:3},{&quot;children&quot;:[],&quot;level&quot;:2,&quot;chaptername&quot;:&quot;第13课　辛亥革命&quot;,&quot;id&quot;:151,&quot;sort&quot;:4},{&quot;children&quot;:[],&quot;level&quot;:2,&quot;chaptername&quot;:&quot;第14课　新民主主义革命的崛起&quot;,&quot;id&quot;:152,&quot;sort&quot;:5},{&quot;children&quot;:[],&quot;level&quot;:2,&quot;chaptername&quot;:&quot;第15课　国共的十年对峙&quot;,&quot;id&quot;:153,&quot;sort&quot;:6},{&quot;children&quot;:[],&quot;level&quot;:2,&quot;chaptername&quot;:&quot;第16课　抗日战争&quot;,&quot;id&quot;:154,&quot;sort&quot;:7},{&quot;children&quot;:[],&quot;level&quot;:2,&quot;chaptername&quot;:&quot;第17课　解放战争&quot;,&quot;id&quot;:155,&quot;sort&quot;:8}],&quot;level&quot;:1,&quot;chaptername&quot;:&quot;第四单元　近代中国反侵略、求民主的潮流&quot;,&quot;id&quot;:147,&quot;sort&quot;:4},{&quot;children&quot;:[{&quot;children&quot;:[],&quot;level&quot;:2,&quot;chaptername&quot;:&quot;第18课　马克思主义的诞生&quot;,&quot;id&quot;:157,&quot;sort&quot;:1},{&quot;children&quot;:[],&quot;level&quot;:2,&quot;chaptername&quot;:&quot;第19课　俄国十月革命的胜利&quot;,&quot;id&quot;:158,&quot;sort&quot;:2}],&quot;level&quot;:1,&quot;chaptername&quot;:&quot;第五单元　从科学社会主义理论到社会主义制度的建立&quot;,&quot;id&quot;:156,&quot;sort&quot;:5},{&quot;children&quot;:[{&quot;children&quot;:[],&quot;level&quot;:2,&quot;chaptername&quot;:&quot;第20课　新中国的民主政治建设&quot;,&quot;id&quot;:160,&quot;sort&quot;:1},{&quot;children&quot;:[],&quot;level&quot;:2,&quot;chaptername&quot;:&quot;第21课　民主政治建设的曲折发展&quot;,&quot;id&quot;:161,&quot;sort&quot;:2},{&quot;children&quot;:[],&quot;level&quot;:2,&quot;chaptername&quot;:&quot;第22课　祖国统一大业&quot;,&quot;id&quot;:162,&quot;sort&quot;:3}],&quot;level&quot;:1,&quot;chaptername&quot;:&quot;第六单元　现代中国的政治建设与祖国统一&quot;,&quot;id&quot;:159,&quot;sort&quot;:6},{&quot;children&quot;:[{&quot;children&quot;:[],&quot;level&quot;:2,&quot;chaptername&quot;:&quot;第23课　新中国初期的外交&quot;,&quot;id&quot;:164,&quot;sort&quot;:1},{&quot;children&quot;:[],&quot;level&quot;:2,&quot;chaptername&quot;:&quot;第24课　开创外交新局面&quot;,&quot;id&quot;:165,&quot;sort&quot;:2}],&quot;level&quot;:1,&quot;chaptername&quot;:&quot;第七单元　现代中国的对外关系&quot;,&quot;id&quot;:163,&quot;sort&quot;:7},{&quot;children&quot;:[{&quot;children&quot;:[],&quot;level&quot;:2,&quot;chaptername&quot;:&quot;第25课　两极世界的形成&quot;,&quot;id&quot;:167,&quot;sort&quot;:1},{&quot;children&quot;:[],&quot;level&quot;:2,&quot;chaptername&quot;:&quot;第26课　世界多极化趋势的出现&quot;,&quot;id&quot;:168,&quot;sort&quot;:2},{&quot;children&quot;:[],&quot;level&quot;:2,&quot;chaptername&quot;:&quot;第27课　世纪之交的世界格局&quot;,&quot;id&quot;:169,&quot;sort&quot;:3}],&quot;level&quot;:1,&quot;chaptername&quot;:&quot;第八单元　当今世界政治格局的多极化趋势&quot;,&quot;id&quot;:166,&quot;sort&quot;:8},{&quot;children&quot;:[],&quot;level&quot;:1,&quot;chaptername&quot;:&quot;附录一　中外历史大事年表&quot;,&quot;id&quot;:170,&quot;sort&quot;:9},{&quot;children&quot;:[],&quot;level&quot;:1,&quot;chaptername&quot;:&quot;附录二　重要词汇中英文对照表&quot;,&quot;id&quot;:171,&quot;sort&quot;:10},{&quot;children&quot;:[],&quot;level&quot;:1,&quot;chaptername&quot;:&quot;附录三　历史学习推荐网站&quot;,&quot;id&quot;:172,&quot;sort&quot;:11},{&quot;children&quot;:[],&quot;level&quot;:1,&quot;chaptername&quot;:&quot;后记&quot;,&quot;id&quot;:173,&quot;sort&quot;:12}],&quot;level&quot;:0,&quot;chaptername&quot;:&quot;高一历史必修一&quot;,&quot;id&quot;:121,&quot;sort&quot;:1}],&quot;stackTrace&quot;:null}</responseData>
+  <cookies class="java.lang.String"></cookies>
+  <method class="java.lang.String">POST</method>
+  <queryString class="java.lang.String">bookId=41</queryString>
+  <java.net.URL>http://192.168.2.48:8004/ebag-kewai-xwhdapi/tyxwhdTeacher/getCategoryByBookId</java.net.URL>
+</httpSample>
+<httpSample t="13" it="0" lt="13" ts="1511428858773" s="true" lb="获得教材列表 " rc="200" rm="OK" tn="线程组 1-1" dt="text" by="568" ng="1" na="1">
+  <assertionResult>
+    <name>响应断言</name>
+    <failure>false</failure>
+    <error>false</error>
+  </assertionResult>
+  <responseData class="java.lang.String">{&quot;code&quot;:0,&quot;message&quot;:null,&quot;errorMessage&quot;:null,&quot;data&quot;:[{&quot;bookId&quot;:41,&quot;bookName&quot;:&quot;高一历史必修一&quot;,&quot;versionId&quot;:1,&quot;versionName&quot;:&quot;人民出版社&quot;,&quot;phaseId&quot;:4,&quot;phaseName&quot;:&quot;高中&quot;,&quot;gradeId&quot;:10,&quot;gradeName&quot;:&quot;高一&quot;}],&quot;stackTrace&quot;:null}</responseData>
+  <cookies class="java.lang.String"></cookies>
+  <method class="java.lang.String">POST</method>
+  <queryString class="java.lang.String">{&#xd;
+  &quot;gradeId&quot;: 10,&#xd;
+  &quot;phaseId&quot;: 4,&#xd;
+  &quot;subjectId&quot;: 288,&#xd;
+  &quot;versionId&quot;: 1&#xd;
+}</queryString>
+  <java.net.URL>http://192.168.2.48:8004/ebag-kewai-xwhdapi/tyxwhdTeacher/getTeacherBooks</java.net.URL>
+</httpSample>
+<httpSample t="12" it="0" lt="12" ts="1511428858862" s="true" lb="查询班级某学科对应的出版社集合" rc="200" rm="OK" tn="线程组 1-1" dt="text" by="656" ng="1" na="1">
+  <assertionResult>
+    <name>响应断言</name>
+    <failure>false</failure>
+    <error>false</error>
+  </assertionResult>
+  <responseData class="java.lang.String">{&quot;code&quot;:0,&quot;message&quot;:null,&quot;errorMessage&quot;:null,&quot;data&quot;:{&quot;success&quot;:true,&quot;msg&quot;:&quot;操作成功&quot;,&quot;total&quot;:0,&quot;pageNumber&quot;:0,&quot;rows&quot;:[{&quot;versionId&quot;:1,&quot;versionName&quot;:&quot;人教版&quot;,&quot;versionPublisher&quot;:&quot;人民出版社&quot;}],&quot;obj&quot;:&quot;&quot;,&quot;attributes&quot;:{},&quot;nullToString&quot;:&quot;&quot;,&quot;filters&quot;:[],&quot;features&quot;:[],&quot;writeNullToSomeString&quot;:false},&quot;stackTrace&quot;:null}</responseData>
+  <cookies class="java.lang.String"></cookies>
+  <method class="java.lang.String">POST</method>
+  <queryString class="java.lang.String">{&#xd;
+  &quot;gradeId&quot;: 10,&#xd;
+  &quot;phaseId&quot;: 4,&#xd;
+  &quot;subjectId&quot;: 288,&#xd;
+  &quot;tenantId&quot;: 2&#xd;
+}</queryString>
+  <java.net.URL>http://192.168.2.48:8004/ebag-kewai-xwhdapi/tyxwhdTeacher/showPressesBySubjectId</java.net.URL>
+</httpSample>
+<httpSample t="27" it="0" lt="27" ts="1511428858954" s="true" lb="老师当前所教的学科集合" rc="200" rm="OK" tn="线程组 1-1" dt="text" by="693" ng="1" na="1">
+  <assertionResult>
+    <name>响应断言</name>
+    <failure>false</failure>
+    <error>false</error>
+  </assertionResult>
+  <responseData class="java.lang.String">{&quot;code&quot;:0,&quot;message&quot;:null,&quot;errorMessage&quot;:null,&quot;data&quot;:{&quot;success&quot;:true,&quot;msg&quot;:&quot;操作成功&quot;,&quot;total&quot;:0,&quot;pageNumber&quot;:0,&quot;rows&quot;:[],&quot;obj&quot;:null,&quot;attributes&quot;:{&quot;subjects&quot;:[{&quot;phase&quot;:4,&quot;name&quot;:&quot;历史&quot;,&quot;schoolSubjectId&quot;:1983,&quot;id&quot;:288,&quot;type&quot;:1,&quot;phaseGrades&quot;:1111110,&quot;isDel&quot;:0}]},&quot;nullToString&quot;:&quot;&quot;,&quot;filters&quot;:[],&quot;features&quot;:[],&quot;writeNullToSomeString&quot;:false},&quot;stackTrace&quot;:null}</responseData>
+  <cookies class="java.lang.String"></cookies>
+  <method class="java.lang.String">POST</method>
+  <queryString class="java.lang.String">{&#xd;
+  &quot;accountId&quot;:126648,&#xd;
+  &quot;classId&quot;: 2353,&#xd;
+  &quot;tenantId&quot;: 2&#xd;
+}</queryString>
+  <java.net.URL>http://192.168.2.48:8004/ebag-kewai-xwhdapi/xwhdStudent/showTeacherHasSubjects</java.net.URL>
+</httpSample>
+
+</testResults>

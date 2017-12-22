@@ -1,0 +1,21 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<mailinfo>
+  <jtlpath>D:/workspace/jmeter/zhm/</jtlpath>
+  <ifsend>y</ifsend>
+  <recivelist>zxd@sxw.cn</recivelist>
+  <whosend>zxd@sxw.cn</whosend>
+  <pwd>Zhouxd1</pwd>
+  <mailserver>smtp.exmail.qq.com</mailserver>
+  <mailport>465</mailport>
+</mailinfo>
+
+<!--
+文件字段说明：
+jtlpath     Jmeter 测试结束后，测试结果文件保存的目录（每次jemter执行前请先删除原jtl文件
+ifsend      设置为【Y】时，没有错误的接口也会发送结果邮件（全部接口），为【N】时，只发送失败的接口信息
+recivelist  收件人列表，多个请用英文逗号隔开
+mailserver  邮件smtp服务器，默认使用的是公司邮箱服务器，不用修改
+whosend     发件人邮箱，只能是一个发件人
+pwd         发件人邮件密码
+mailport    mailserversmtp服务器服务器端口。默认465，不用修改
+-->

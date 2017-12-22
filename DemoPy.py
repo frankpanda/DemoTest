@@ -1,6 +1,6 @@
 # _*_ coding:utf-8 _*_
 
-import MySQLdb
+# import MySQLdb
 import sys
 import os
 from collections import deque
@@ -9,6 +9,9 @@ import time
 import datetime
 import json
 from lxml import etree
+import csv
+import requests
+import shutil
 
 __author__ = 'Panda'
 
@@ -374,10 +377,56 @@ def get_max_char(string):
     print u"出现次数最多的字符是：" + max(data_dict, key=data_dict.get)
 
     max_char = temp_list[0]
-    for j in range(len(temp_list)-1):
+    for j in range(len(temp_list) - 1):
         if temp_list[j] < temp_list[j + 1]:
             max_char = temp_list[j + 1]
     print max_char
+
+
+def reglize_param_type(params):
+    if not isinstance(params, str) and not isinstance(params, unicode):
+        print u"非字符串或者unicode字符"
+        if isinstance(params, dict):
+            print u"字典类型"
+            print type(params)
+        else:
+            print u"数字类型"
+            type(params)
+    else:
+        print u"字符串或者unicode"
+        print type(params)
+
+
+def test_write_file():
+    file_name = r"d:/python_write.txt"
+    with open(file_name, "w") as file:
+        file.write("first line")
+        file.write("second line")
+    print u"完成..."
+
+
+def debug_test(x, y):
+    a = x
+    b = y
+    c = a + b
+    print c
+
+
+def get_params_from_csv(csv_path, cols_no=0):
+    """
+    引用的文件为已经生成好的数据文件，格式为：getaccountid,usercccount,gettokenid
+    :param csv_path:读取文件路径
+    :param cols_no:数据行号：第一列getaccountid,第二列usercccount,第三列gettokenid
+    :return:
+    """
+    with open(csv_path, 'rb') as csv_file:
+        reader = csv.reader(csv_file)
+        if cols_no == 0:
+            data = [row for row in reader]
+        else:
+            data = [row[cols_no - 1] for row in reader]
+
+    return data
 
 
 if __name__ == "__main__":
@@ -415,5 +464,34 @@ if __name__ == "__main__":
     y = use_yield()
     print y.next()
     print y.next()
+
+    # get_max_char("abbcccdddd")
+
+    print int(time.time())
+
+    dest_str = r"/test/{pid}/path/{hid}"
+    dest_dict = {
+        "pid": "one",
+        "hid": "two"
+    }
+
+    test_str = "/test/"+dest_dict["pid"]+"/path/"+dest_dict["hid"]
+
+    t = "12sd"
+    reglize_param_type(t)
+    # test_write_file()
+    a = 1
+    b = 3
+    rate = round(float(a) / float(b), 2)
+    print rate, rate * 100
+    percent = "%d%%" % int(round(float(a) / float(b), 2) * 100)
+    print percent
+    test_write_file()
+    print get_params_from_csv("studata.txt")
     """
-    get_max_char("abbcccdddd")
+    try:
+        a = 20
+    except Exception, e:
+        print "test"
+    b = a + 10
+    print b
