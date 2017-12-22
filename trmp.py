@@ -5,6 +5,7 @@ __author__ = 'xiong bing'
 
 import wx
 import os
+# test
 
 
 class SMSSender(wx.Frame):
